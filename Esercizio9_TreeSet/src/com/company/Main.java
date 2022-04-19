@@ -1,8 +1,8 @@
-package com.company;
+package ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company;
 
-import com.company.Exception.AlreadyPresentException;
-import com.company.Exception.NotFoundException;
-import com.company.Exception.NullAuthorException;
+import ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company.Exception.AlreadyPresentException;
+import ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company.Exception.NotFoundException;
+import ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company.Exception.NullAuthorException;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -224,5 +224,8 @@ public class Main {
         }
         Utente u= new Utente(lista, ordine);
         u.generaLista(m);
+
+        System.out.println();
+        System.out.println(m.opereAutore(a1));
     }
 }

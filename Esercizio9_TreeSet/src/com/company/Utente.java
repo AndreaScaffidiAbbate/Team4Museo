@@ -1,6 +1,6 @@
-package com.company;
+package ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company;
 
-import com.company.Comparator.*;
+import ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company.Comparator.*;
 
 public class Utente {
 

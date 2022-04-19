@@ -1,6 +1,6 @@
-package com.company.Comparator;
+package ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company.Comparator;
 
-import com.company.Autore;
+import ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company.Autore;
 
 import java.util.Comparator;
 

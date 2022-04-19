@@ -1,6 +1,6 @@
-package com.company;
+package ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company;
 
-import com.company.Exception.NullAuthorException;
+import ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company.Exception.NullAuthorException;
 
 import java.util.UUID;
 

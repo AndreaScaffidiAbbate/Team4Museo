@@ -1,12 +1,13 @@
-package com.company;
+package ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company;
 
-import com.company.Exception.AlreadyPresentException;
-import com.company.Exception.NotFoundException;
+import ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company.Exception.AlreadyPresentException;
+import ExMuseo.Team4Museo.Esercizio9_TreeSet.src.com.company.Exception.NotFoundException;
 
 import java.util.*;
 
 public class Museo{
 
+    private Map<Autore, ArrayList<Opera>> mappaAutori = new HashMap<>();
     private HashSet<Opera> deposito;
     private LinkedHashSet<Opera> esposizione;
 
@@ -47,6 +48,10 @@ public class Museo{
                 System.out.println("Opera "+o.getTitolo()+" aggiunta in deposito\n");
             }
         }
+        if(!mappaAutori.containsKey(o.getAutore())){
+            mappaAutori.put(o.getAutore(), new ArrayList<Opera>());
+        }
+            mappaAutori.get(o.getAutore()).add(o);
     }
 
     public void sposta(UUID id) throws AlreadyPresentException {
@@ -106,13 +111,19 @@ public class Museo{
 
     public String opereAutore(Autore a){
         String opere= "";
-        for(Opera x: esposizione){
+       /* for(Opera x: esposizione){
             if(x.getAutore().equals(a)){
                 opere+= x.toString();
             }
         }
         for(Opera x: deposito){
             if(x.getAutore().equals(a)){
+                opere+= x.toString();
+            }
+        }*/
+
+        if(mappaAutori.containsKey(a)){
+            for(Opera x: mappaAutori.get(a)){
                 opere+= x.toString();
             }
         }
@@ -205,4 +216,6 @@ public class Museo{
         }
         System.out.println(autori);
     }
+
+
 }
